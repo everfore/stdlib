@@ -8,9 +8,9 @@ import (
 
 func TestAuth(t *testing.T) {
 	vals := url.Values{
-		"client_id":    {"8ba2991113e68b4805c1"},
+		"client_id":    {"8ba2991113e68b4805c7"},
 		"redirect_uri": {"http://echoath.daoapp.io/callback"},
-		"scope":        {"repo"},
+		"scope":        {"user,repo,gist"},
 		"state":        {"state"},
 	}
 	v := vals.Encode()
