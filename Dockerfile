@@ -1,6 +1,9 @@
-FROM java:7
-COPY . /usr/src/myapp
-WORKDIR /usr/src/myapp
-# RUN javac MyHello.java
+FROM google/golang
+MAINTAINER Shaalx Shi "60026668.m@daocloud.io"
+
+# Build app
+WORKDIR /gopath/app
+ENV GOPATH /gopath/app
+ADD . /gopath/app/
 EXPOSE 80
-CMD ["java", "-jar", "PlaneGame.jar"]
+CMD ["/gopath/app/bin/callback"]
