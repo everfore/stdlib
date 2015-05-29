@@ -23,3 +23,11 @@ angular.module("app", []).controller("HelloCtrl",
     $scope.cname="ANGULARJS_A";
 });
 
+angular.module('TA',[]).controller('TextArea',
+	function ($scope) {
+	    $scope.message="tatata";
+
+	    
+});
+
+

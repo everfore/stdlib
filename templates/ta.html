@@ -1,0 +1,18 @@
+<html ng-app="TA">
+<head>
+	<script src="js/angular.js"></script>
+    <script src="js/control.js"></script>
+</head>
+<body ng-controller="TextArea">
+	<div class="container">
+		<div>
+			<textarea row="6" ng-model="message">{{message}}</textarea>
+		</div>
+		<div>
+			<button ng-click="send()">Send</button>
+			<button ng-click="clear()">Clear</button>
+		</div>
+		
+	</div>
+</body>
+</html>
