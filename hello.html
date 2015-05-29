@@ -1,8 +1,9 @@
 <html>
     <head>
         <script src="angular.js"></script>
+        <script src="control.js"></script>
     </head>
-    <body ng-app ng-init="name = 'World'">
+    <body ng-app="app" ng-init="name = 'World'">
         Your name: <input type="text" ng-model="name">
         <hr>
         Hello {{name}}!
@@ -10,5 +11,11 @@
         Your name: <input type="text" ng-model="yourname" placeholder="World">
         <hr>
         Hello {{yourname || 'World'}}!
+        <hr>
+        <div ng-controller="HelloCtrl">
+            Your name: <input type="text" ng-model="cname"><br>
+            <hr>
+            <h1>Hello,{{cname}}!</h1>
+        </div>
     </body>
 </html>
