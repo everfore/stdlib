@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html ng-app="FF">
+  <head>
+    <title>ReactFire Test Suite</title>
+
+    <!-- React -->
+    <script src="js/react/react-with-addons.js"></script>
+    <script src="js/react/react.js"></script>
+    <script src="js/react/JSXTransformer.js"></script>
+
+    <script src="js/angular.js"></script>
+    <script src="js/control.js"></script>
+     
+    <script type="text/jsx">
+      var Photo = React.createClass({
+        render: function() {
+          return <input type="text" value="REACTJS"/>
+        }
+      });
+
+      var Photo2 = React.createClass({
+        render: function() {
+          return <input type="password" value="REACTJS"/>
+        }
+      });
+
+      var Texty = React.createClass({
+        render: function() {
+          return <input type="text" value="123"/>
+        }
+      });
+
+      React.render(<Photo />, document.getElementById('content'));
+      React.render(<Photo2 />, document.getElementById('content2'));
+      React.render(<Texty ng-model="cname" />, document.getElementById('content4'));
+    </script>
+  </head>
+
+  <body ng-controller="HelloCtrl">
+  <h1>nanananana</h1>
+  <div id="content"></div>
+  <div id="content2"></div>
+  <div id="content3">
+    <h1>{{cname}},_origin.</h1>
+  </div>
+  <div id="content4"></div>
+  </body>
+</html>
