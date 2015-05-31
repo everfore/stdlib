@@ -1,7 +1,9 @@
 package main
 
 import (
+	"fmt"
 	"github.com/Unknwon/macaron"
+	"io"
 	"net/http"
 )
 
@@ -13,6 +15,8 @@ func main() {
 
 func root(rw http.ResponseWriter, req *http.Request) {
 	rw.Write([]byte("AngularJS"))
+	io.WriteString(rw, "Angular.js")
+	fmt.Fprintln(rw, "A n g u l a r . j s")
 }
 
 func v1() {
