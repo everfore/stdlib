@@ -6,6 +6,7 @@ WORKDIR /gopath/app
 ENV GOPATH /gopath/app
 ADD . /gopath/app/
 RUN go build -o gostdlib
-RUN godoc -http=:9000 &
-EXPOSE 9000 80
-CMD ["/gopath/app/gostdlib"]
+RUN chmod u+x /gopath/app/gostdlib
+RUN chmod u+x /gopath/app/run.sh
+EXPOSE 9000:9000 80:80
+CMD ["/gopath/app/run.sh"]
