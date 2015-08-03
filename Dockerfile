@@ -8,5 +8,5 @@ ADD . /gopath/app/
 RUN go build -o gostdlib
 RUN chmod u+x /gopath/app/gostdlib
 RUN chmod u+x /gopath/app/run.sh
-EXPOSE -p 9000:9000 -p 80:80
+EXPOSE 9000:9000 80:80
 CMD ["/gopath/app/run.sh"]
