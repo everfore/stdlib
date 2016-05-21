@@ -5,8 +5,8 @@ import (
 )
 
 func main() {
-	// http.Handle("/", http.FileServer(http.Dir("stdlib/")))
-	http.Handle("/", http.FileServer(http.Dir("building/")))
+	http.Handle("/", http.FileServer(http.Dir("stdlib/")))
+	// http.Handle("/", http.FileServer(http.Dir("building/")))
 	err := http.ListenAndServe(":80", nil)
 	if check_err(err) {
 		return
